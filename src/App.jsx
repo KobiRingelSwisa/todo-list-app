@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ToDo from "./components/Todo";
 import TodoForm from "./components/TodoForm";
+import Header from "./components/Header";
 
 function App() {
   const [todos, setTodos] = useState([
@@ -27,20 +28,23 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <div className="todo-list">
-        {todos.map((todo, index) => (
-          <ToDo
-            key={index}
-            index={index}
-            todo={todo}
-            completeTodo={completeTodo}
-            removeTodo={removeTodo}
-          />
-        ))}
-        <TodoForm addTodo={addTodo} />
+    <>
+      <Header />
+      <div className="app">
+        <div className="todo-list">
+          {todos.map((todo, index) => (
+            <ToDo
+              key={index}
+              index={index}
+              todo={todo}
+              completeTodo={completeTodo}
+              removeTodo={removeTodo}
+            />
+          ))}
+          <TodoForm addTodo={addTodo} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

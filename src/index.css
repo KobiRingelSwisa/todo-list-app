@@ -16,7 +16,6 @@
 body {
   background-color: turquoise;
   margin: 0;
-  display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
@@ -60,10 +59,8 @@ button:focus-visible {
   align-items: center;
   justify-content: center;
   height: 100vh;
-} */
-
-
-.todo-list {
+}
+*/ .todo-list {
   width: 300px;
 }
 
@@ -85,4 +82,20 @@ button:focus-visible {
   border: 1px solid #ddd;
   margin-bottom: 10px;
   box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 5rem;
+    margin-top: 1rem;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: xx-large;
+  }
 }
