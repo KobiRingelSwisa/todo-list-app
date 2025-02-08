@@ -1,8 +1,8 @@
 import React from "react";
 
-function ToDo({ todo, index, completeTodo, removeTodo }) {
+export default function ToDo({ todo, index, completeTodo, removeTodo }) {
   return (
-    <div>
+    <div className="todo">
       <span style={{ textDecoration: todo.isCompleted ? "line-through" : "" }}>
         {todo.text}
       </span>
@@ -13,5 +13,3 @@ function ToDo({ todo, index, completeTodo, removeTodo }) {
     </div>
   );
 }
-
-export default ToDo;

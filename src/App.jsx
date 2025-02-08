@@ -1,13 +1,18 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import ToDo from "./components/Todo";
 import TodoForm from "./components/TodoForm";
 
 function App() {
   const [todos, setTodos] = useState([
     { text: "Learn React", isCompleted: false },
-    { text: "Build To-do App", isCompleted: false },
+    { text: "Build ToDo App", isCompleted: false },
     { text: "Deploy to server", isCompleted: false },
   ]);
+
+  const addTodo = (text) => {
+    const newTodos = [...todos, { text }];
+    setTodos(newTodos);
+  };
 
   const completeTodo = (index) => {
     const newTodos = [...todos];
@@ -21,14 +26,9 @@ function App() {
     setTodos(newTodos);
   };
 
-  const addTodo = (text) => {
-    const newTodos = [...todos, { text }];
-    setTodos(newTodos);
-  };
-
   return (
-    <div>
-      <div>
+    <div className="app">
+      <div className="todo-list">
         {todos.map((todo, index) => (
           <ToDo
             key={index}
