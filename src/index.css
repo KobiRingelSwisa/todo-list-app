@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -14,7 +18,7 @@
 }
 
 body {
-  background-color: turquoise;
+  background-color: rgb(128, 159, 184);
   margin: 0;
   place-items: center;
   min-width: 320px;
@@ -98,4 +102,23 @@ header {
     color: #fff;
     font-size: xx-large;
   }
+}
+
+.form-div {
+  padding-top: 8rem;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 10rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+h3 {
+  border-radius: 3rem;
+  background-color: #646cff;
 }
